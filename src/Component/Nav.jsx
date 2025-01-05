@@ -8,13 +8,16 @@ export const Nav = () => {
     <>
 
 
-  <section className='bg-[#000000] py-3'>
+  <section className=' bg-[#000000] nav py-3'>
     <div className="container">
         
     <nav
             className="flex items-center justify-between text-white font-bold w-full relative px-[10px] py-[8px]">
+            <div className='d-flex align-items-center'>
             <img src={logo} alt="logo" className="w-[55px] "/>
-            <ul className="items-center text-white gap-[20px] text-[1rem] text-[#424242] lg:flex hidden">
+            <p className='ps-2 tracking-wide'><span className='text-[#FFDA79]'>Van Lang</span> Tour</p>
+            </div>
+            <ul className="items-center text-white gap-[20px] text-[1rem]  lg:flex hidden">
                 <li className=" px-2  before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">home</li>
                 <li className=" px-2  before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">features</li>
                 <li className=" px-2  before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">blogs</li>
@@ -36,7 +39,7 @@ export const Nav = () => {
             </div>
 
             <aside
-                className={` ${mobileSidebarOpen ? "translate-x-0 opacity-100 z-20" : "translate-x-[200px] opacity-0 z-[-1]"} lg:hidden bg-white boxShadow p-4 text-center absolute top-[65px] right-0 w-full rounded-md transition-all duration-300`}>
+                className={` ${mobileSidebarOpen ? "translate-y-0 opacity-100 z-20" : "translate-y-[200px] opacity-0 z-[-1]"} lg:hidden bg-white boxShadow p-4 text-center absolute top-[65px] right-0 w-full rounded-md transition-all duration-300`}>
                 <div className="relative mb-5">
                     <input
                         className="py-1.5 pr-4 w-full pl-10 rounded-full border border-gray-200 outline-none focus:border-[#3B9DF8]"

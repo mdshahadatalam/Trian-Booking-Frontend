@@ -16,3 +16,15 @@
   border: none !important;
 
 }
+.nav{
+	opacity: 80%;
+}
+
+/* main section  */
+.mainBg{
+	background-image: url(./assets//image/bg/bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 1000px;
+}

@@ -1,12 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { Nav } from './Component/Nav';
+import { Main } from './Pages/Main';
 
 function App() {
   return (
     <>
-    <Nav/>
-
+   <Main/>
     </>
   )
 }
