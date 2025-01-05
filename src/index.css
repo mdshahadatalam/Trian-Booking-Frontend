@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--color: #e3af1d;
+	--color-2: #fff;
+	--color-3: #000;
+	--color-4: #ffd979;
+	--color-5: #cfb165;
+}
+
+.navIcon{
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+
+}
