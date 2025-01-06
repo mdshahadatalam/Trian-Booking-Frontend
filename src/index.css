@@ -164,11 +164,11 @@ color: var(--color-2);
 /* opacity: 0.5; */
 }
 .next{
-    width: 119px;
-height: 56px;
+width: 100px;
+height: 46px;
 font-family: var(--font-family);
 font-weight: 700;
-font-size: 24px;
+font-size: 18px;
 color: var(--color-3);
 border-radius: 20px;
 background-color: #CFB165;
@@ -196,3 +196,51 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         color: var(--color-3);
         }
  }
+
+ /* login  */
+ .log{
+font-weight: 700;
+font-size: 24px;
+color: var(--color-5);
+
+ }
+ .welcome{
+font-weight: 700;
+font-size: 14px;
+color: var(--color-3);
+ }
+
+ .logInpo{
+width: 281px;
+height: 38px;
+outline: none;
+border-bottom: 1px solid #000;
+ }
+.logInpo::placeholder{
+font-weight: 300;
+font-size: 22px;
+text-transform: capitalize;
+color: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 575.98px) { 
+    .logInpo{
+        width: 100%;
+    }  
+}
+@media (max-width: 991.98px) { 
+    .logInpo{
+        width: 100%;
+    }  
+}
+
+.loginbt{
+    border-radius: 14px;
+padding: 11px 19px;
+width: 110px;
+height: 39px;
+background: var(--color-5);
+font-weight: 700;
+font-size: 18px;
+color: var(--color-2);
+}

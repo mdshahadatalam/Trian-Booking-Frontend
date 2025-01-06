@@ -4,6 +4,7 @@ import { Main } from './Pages/Main';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router';
 import { RootLayout } from './RootLayout';
 import { Rejistration } from './Pages/Rejistration';
+import { Login } from './Pages/Login';
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -12,6 +13,7 @@ function App() {
            <Route element={<RootLayout/>}>
            <Route path="/" element={<Main />} />
            <Route path="/rejistration" element={<Rejistration />} />
+           <Route path="/login" element={<Login />} />
            </Route>
     </Route>
 
