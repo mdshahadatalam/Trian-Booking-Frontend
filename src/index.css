@@ -127,3 +127,24 @@ font-weight: 200;
 font-size: 12px;
 color: var(--color-2);
 }
+
+/* rejistration  */
+.RejiBg{
+	background-image: url(./assets//image/bg/bg2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 1000px;
+}
+
+.ready{
+font-weight: 700;
+font-size: 40px;
+color: var(--color-3);
+}
+
+.weNeed{
+font-weight: 400;
+font-size: 24px;
+color: var(--color-3);
+}
