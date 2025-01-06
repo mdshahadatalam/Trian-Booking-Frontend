@@ -40,12 +40,6 @@ color: var(--color-2);
 }
 
 
-
-
-.mainBg {
-    /* Add your background styles here */
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -149,9 +143,9 @@ font-size: 24px;
 color: var(--color-3);
 }
 .inpoRe{
-    border-radius: 20px;
+    border-radius: 10px;
     width: 374px;
-    height: 56px;
+    height: 50px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: var(--color-5);
     outline: none;
