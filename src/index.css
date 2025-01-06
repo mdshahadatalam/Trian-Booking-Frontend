@@ -209,6 +209,7 @@ width: 281px;
 height: 38px;
 outline: none;
 border-bottom: 1px solid #000;
+color: #000;
  }
 .logInpo::placeholder{
 font-weight: 300;

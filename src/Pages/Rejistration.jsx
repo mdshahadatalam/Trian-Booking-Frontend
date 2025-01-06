@@ -2,6 +2,7 @@ import React from 'react'
 import { Nav } from '../Component/Nav'
 import { Formik, useFormik } from 'formik'
 import values from './../../node_modules/lodash-es/values';
+import { signUp } from '../Validation/Validation';
 
 export const Rejistration = () => {
 
@@ -19,7 +20,9 @@ export const Rejistration = () => {
     onSubmit:(values,{resetForm})=>{
       createdNewUser()
       resetForm({values:''})
-    }
+    },
+    validationSchema:signUp
+    
   })
 
   const createdNewUser = () => {
@@ -33,58 +36,80 @@ export const Rejistration = () => {
         <div className='bg-[#FFFFFF] nav modalView text-white position-absolute top-52 w-[90%] md:w-[50%] rounded-2xl shadow-md px-2 py-5'>
             <div className='text-center'>
                 <h4 className='ready text-xl md:text-2xl lg:text-3xl'>Ready to join Van Lang Tour? Let’s get started</h4>
-                <p className='weNeed text-sm md:text-base lg:text-lg mt-2'>We need a few details about you to create your account profile</p>
+                <p className='weNeed text-sm md:text-base lg:text-lg my-2'>We need a few details about you to create your account profile</p>
 
                 <form onSubmit={Formik.handleSubmit} action="">
-                    <div className='flex flex-col md:flex-row justify-center'>
+                    
                         <input
-                         className='inpoRe my-3 mx-2 w-full md:w-[48%] p-2 rounded-lg border border-gray-300' type="text"
+                         className='logInpo my-3' type="text"
                           placeholder='First name'
                           id='firstName'
                           name='firstName'
                           value={Formik.values.firstName}
                           onChange={Formik.handleChange}
                            />
+                            {
+                              Formik.errors.firstName && Formik.touched.firstName && <div className="text-red-500"> {Formik.errors.firstName} </div>
+                            }
                         <input 
-                        className='inpoRe my-3 mx-2 w-full md:w-[48%] p-2 rounded-lg border border-gray-300' type="text"
+                        className='logInpo my-3' type="text"
                          placeholder='Last name'
                          id='lastName'
                          name='lastName'
                          value={Formik.values.lastName}
                          onChange={Formik.handleChange}
                           />
-                    </div>
-                    <div className='flex flex-col md:flex-row justify-center'>
+                          {
+                            Formik.errors.lastName && Formik.touched.lastName && <div className="text-red-500"> {Formik.errors.lastName} </div>
+                          }
+                    
+                    
                         <input
-                         className='inpoRe my-3 mx-2 w-full md:w-[48%] p-2 rounded-lg border border-gray-300' type="tel"
+                         className='logInpo my-3 ' type="tel"
                           placeholder='Phone number'
                           id='phone'
                           name='phone'
                           value={Formik.values.phone}
                           onChange={Formik.handleChange}
                            />
+                           {
+                            Formik.errors.phone && Formik.touched.phone && <div className="text-red-500">
+                              {Formik.errors.phone}
+                            </div>
+                           }
                         <input
-                         className='inpoRe my-3 mx-2 w-full md:w-[48%] p-2 rounded-lg border border-gray-300' type="email"
+                         className='logInpo my-3' type="email"
                           placeholder='Email'
                           id='email'
                           name='email'
                           value={Formik.values.email}
                           onChange={Formik.handleChange}
                            />
-                    </div>
-                    <div className='flex '>
+                           {
+                            Formik.errors.email && Formik.touched.email && <div className="text-red-500">
+                              {Formik.errors.email} </div>
+                           }
+                    
+                    
                         <input
-                         className='inpoRe my-3 mx-2 w-full md:w-[48%] p-2 rounded-lg border border-gray-300' type="password"
+                         className='logInpo my-3' type="password"
                          id='password'
                          name='password'
                           placeholder='Password'
                           value={Formik.values.password}
                           onChange={Formik.handleChange}
                            />
+                           {
+                            Formik.errors.password && Formik.touched.password && <div className="text-red-500">
+                              {Formik.errors.password}
+                            </div>
+                           }
+                  
+
+
+                    <div>
+                    <button type='submit' className='next mt-2 transition duration-300 ease-in-out transform hover:bg-[#d3ab44] hover:shadow-lg hover:scale-105'>Next</button>
                     </div>
-
-
-                    <button type='submit' className='next  transition duration-300 ease-in-out transform hover:bg-[#d3ab44] hover:shadow-lg hover:scale-105'>Next</button>
                 </form>
                 
             </div>
