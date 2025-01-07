@@ -7,3 +7,8 @@ export const signUp = Yup.object({
      email:Yup.string().required("Please enter your email"),
      password:Yup.string().min(8).matches(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/,'Enter one special character')
 }).required('Fill up all the fields' )
+
+export const signIn = Yup.object({
+     email:Yup.string().required("Please enter your email"),
+     password:Yup.string()
+}).required('Fill up all the fields' )

@@ -1,8 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Nav } from '../Component/Nav'
 import logo from '../assets/image/logo/brand 2.png'
+import { useFormik } from 'formik'
+import { signIn } from '../Validation/Validation'
+import { toast, ToastContainer } from 'react-toastify'
+import { SyncLoader } from 'react-spinners'
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router'
 
 export const Login = () => {
+  
+  const navigate = useNavigate()
+  const auth = getAuth();
+  const [loader,setLoader] = useState(false)
+  const initialValues ={
+    email: '',
+    password: ''
+  }
+
+  const formik = useFormik({
+    initialValues,
+    onSubmit:(values,{resetForm})=>{
+      signInNewUser()
+      resetForm({values:''})
+    },
+    validationSchema:signIn
+  })
+  const signInNewUser =()=>{
+    setLoader(true)
+    // console.log(formik.values)
+    signInWithEmailAndPassword(auth, formik.values.email,formik.values.password)
+  .then((user) => {
+    console.log("Sign In");
+    setLoader(false)
+    if(user.user.emailVerified == true){
+      navigate('/')
+    }else{
+       toast.error('Your email is not verified', {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: false,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              // transition: Bounce,
+              });
+    }
+    
+  })
+  .catch((error) => {
+    console.log(error);
+    setLoader(false)
+    
+  });
+  }
   return (
     <>
     <section className='RejiBg'>
@@ -19,13 +72,33 @@ export const Login = () => {
                   
                 </div>
 
-                <form className='py-3 px-2 text-center'  action="">
-                    <input className='logInpo my-3' type="email" placeholder='Email' />
-                    <input className='logInpo my-3' type="password" placeholder='Password' />
+                <form onSubmit={formik.handleSubmit} className='py-3 px-2 text-center'  action="">
+                    <input
+                         className='logInpo my-3' 
+                         type="email"
+                         placeholder='Email'
+                         id='email'
+                          name='email'
+                          value={formik.values.email}
+                          onChange={formik.handleChange}
+                       />
+                    <input 
+                     className='logInpo my-3'
+                      type="password"
+                       placeholder='Password' 
+                       value={formik.values.password}
+                       onChange={formik.handleChange}
+                       id='password'
+                        name='password'
+                       />
 
 
                     <div className='cen mt-2'>
-                        <button className='loginbt  p-0 shadow-md  transition duration-300 ease-in-out transform hover:bg-[#d3ab44] hover:shadow-lg hover:scale-105'>Login</button>
+                        <button type='submit' className='loginbt  p-0 shadow-md  transition duration-300 ease-in-out transform hover:bg-[#d3ab44] hover:shadow-lg hover:scale-105'>
+                          {
+                            loader ? <SyncLoader size={5} color='white' />: "Login"
+                          }
+                          </button>
                      </div>
                 </form>
 
@@ -34,6 +107,7 @@ export const Login = () => {
             </div>
         </div>
     </section>
+    <ToastContainer />
     </>
   )
 }
