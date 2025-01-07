@@ -121,7 +121,7 @@ export const Rejistration = () => {
                           onChange={formik.handleChange}
                            />
                            {
-                            formik.errors.phone && Formik.touched.phone && <div className="text-red-500">
+                            formik.errors.phone && formik.touched.phone && <div className="text-red-500">
                               {formik.errors.phone}
                             </div>
                            }
@@ -163,6 +163,8 @@ export const Rejistration = () => {
                       </button>
                     </div>
                 </form>
+
+            
                 
             </div>
 
