@@ -2,10 +2,13 @@ import React from 'react'
 import { Nav } from '../Component/Nav'
 import { useFormik } from 'formik'
 import { signUp } from '../Validation/Validation';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword , sendEmailVerification } from "firebase/auth";
+import { toast, ToastContainer } from 'react-toastify';
+import { useState } from 'react';
+import { SyncLoader } from 'react-spinners';
 
 export const Rejistration = () => {
-
+  const [loader,setLoader] = useState(false)
   const auth = getAuth();
   const initialValues ={
      firstName:"",
@@ -26,14 +29,44 @@ export const Rejistration = () => {
   })
 
   const createdNewUser = ()=>{
+    setLoader(true)
     // console.log(Formik.values)
     createUserWithEmailAndPassword(auth, formik.values.email, formik.values.password)
   .then((res) => {
-    console.log("sign up");
+    setLoader(false)
+    // console.log("sign up");
+    sendEmailVerification(auth.currentUser)
+    toast.success('Email verification send', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      // transition: Bounce,
+      });
     
   })
   .catch((error) => {
     console.log(error);
+    setLoader(false)
+
+    if(error.message.includes('auth/email-already-in-use')){
+      toast.error('Something wrong', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: Bounce,
+        });
+    }
+    
     
   });
   }
@@ -117,7 +150,11 @@ export const Rejistration = () => {
 
 
                     <div>
-                    <button type='submit' className='next mt-2 transition duration-300 ease-in-out transform hover:bg-[#d3ab44] hover:shadow-lg hover:scale-105'>Next</button>
+                    <button type='submit' className='next mt-2 transition duration-300 ease-in-out transform hover:bg-[#d3ab44] hover:shadow-lg hover:scale-105'>
+                      {
+                        loader? <SyncLoader size={5} color='white'  /> : " Sign up"
+                      }
+                      </button>
                     </div>
                 </form>
                 
@@ -127,6 +164,7 @@ export const Rejistration = () => {
         </div>
     </div>
 </section>
+<ToastContainer />
     </>
   )
 }
