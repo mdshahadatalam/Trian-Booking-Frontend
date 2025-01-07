@@ -53,6 +53,19 @@ export const Login = () => {
   .catch((error) => {
     console.log(error);
     setLoader(false)
+    if(error.message.includes('auth/invalid-credential')){
+      toast.error('Email or Password Incorrect', {
+         position: "top-right",
+         autoClose: 1000,
+         hideProgressBar: true,
+         closeOnClick: true,
+         pauseOnHover: true,
+         draggable: true,
+         progress: undefined,
+         theme: "light",
+         
+         });
+        }
     
   });
   }

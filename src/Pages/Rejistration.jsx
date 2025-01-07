@@ -6,8 +6,10 @@ import { getAuth, createUserWithEmailAndPassword , sendEmailVerification } from 
 import { toast, ToastContainer } from 'react-toastify';
 import { useState } from 'react';
 import { SyncLoader } from 'react-spinners';
+import { useNavigate } from 'react-router';
 
 export const Rejistration = () => {
+  const navigate = useNavigate()
   const [loader,setLoader] = useState(false)
   const auth = getAuth();
   const initialValues ={
@@ -47,6 +49,10 @@ export const Rejistration = () => {
       theme: "light",
       // transition: Bounce,
       });
+
+      setTimeout(()=>{
+        navigate('/login')
+      },2500)
     
   })
   .catch((error) => {
