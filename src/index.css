@@ -322,3 +322,14 @@ background: var(--color-5);
                 height: auto;
              }
   }
+
+
+  .damiHome{
+font-weight: 700;
+font-size: 18px;
+text-align: center;
+color: var(--color-2);
+  }
+
+
+  

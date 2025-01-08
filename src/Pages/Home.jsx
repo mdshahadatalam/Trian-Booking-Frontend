@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavMain } from '../Component/NavMain'
+import { HomeBanner } from '../Component/HomeBanner'
 
 export const Home = () => {
   return (
@@ -14,6 +15,7 @@ export const Home = () => {
           </div>
       </div>
     </section>
+     <HomeBanner/>
    </>
   )
 }
