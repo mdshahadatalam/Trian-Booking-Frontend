@@ -3,19 +3,37 @@ import {IoIosSearch} from "react-icons/io";
 import {CiMenuFries} from "react-icons/ci";
 import logo from '../assets/image/logo/brand 2.png'
 import { useLocation, useNavigate } from 'react-router';
+import { getAuth, signOut } from "firebase/auth";
+import { useDispatch } from 'react-redux';
+import { loggedInUser } from '../Fueature/Slice/LoginSlice';
+import { SyncLoader } from 'react-spinners';
 
 export const NavMain = () => {
     const navigate = useNavigate()
-    const location = useLocation()
+    const dispatch = useDispatch()
+    const auth = getAuth();
+    const [loader,setLoader] = useState()
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
 
-  const handleLogin =()=>{
-    navigate('/login')
-  }
 
-  const handleSignUp =()=>{
-    navigate('/rejistration')
-  } 
+  const handleLoggedOutUser =()=>{
+    signOut(auth).then(() => {
+        setLoader(true)
+        // console.log("signOut");
+        setTimeout(()=>{
+            navigate('/')
+            dispatch(loggedInUser())
+           localStorage.removeItem('user')
+        },2500)
+        
+        
+        
+      }).catch((error) => {
+        setLoader(false)
+        console.log(error);
+        
+      });
+  }
   return (
     <>
 
@@ -37,8 +55,11 @@ export const NavMain = () => {
             </ul>
 
             <div className="items-center gap-[10px] flex">
-                <button 
-                    className="py-[7px] text-lg tracking-wide text-[1rem] px-[16px] rounded-full capitalize bg-[#3B9DF8] text-white hover:bg-blue-400 transition-all duration-300 sm:flex hidden">LogOut
+                <button onClick={handleLoggedOutUser}
+                    className="nextMain  bg-[#3B9DF8] text-white tracking-wide mt-2 transition duration-300 shadow-md ease-in-out transform hover:bg-[#337bbe] hover:shadow-lg hover:scale-105">
+                        {
+                            loader ? <SyncLoader size={5} color='white'/> : "LogOut"
+                        } 
                 </button>
                 
 

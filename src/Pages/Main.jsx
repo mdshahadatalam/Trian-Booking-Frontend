@@ -1,6 +1,25 @@
 import React from 'react'
 import { NavMain } from '../Component/NavMain';
+import { useLocation } from 'react-router';
+import { toast } from 'react-toastify';
 export const Main = () => {
+
+    const location = useLocation()
+    {
+        location.pathname='/'?`${toast.success('See you again 👋', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            // transition: Bounce,
+            })}` : ""
+    }
+    // console.log(location);
+    
   return (
     <>
     <section className='mainBg'>

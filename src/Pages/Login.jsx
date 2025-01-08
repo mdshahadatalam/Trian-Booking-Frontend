@@ -10,8 +10,7 @@ import { useNavigate } from 'react-router'
 import { useDispatch } from 'react-redux'
 import { loggedInUser } from '../Fueature/Slice/LoginSlice'
 
-export const Login = () => {
-  
+export const Login = () => { 
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const auth = getAuth();

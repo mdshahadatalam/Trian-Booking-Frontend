@@ -239,3 +239,16 @@ font-weight: 700;
 font-size: 18px;
 color: var(--color-2);
 }
+
+.nextMain{
+    width: 100px;
+    height: 46px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 17px;
+    /* color: var(--color-3); */
+    border-radius: 20px;
+    /* background-color: #CFB165; */
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+    
