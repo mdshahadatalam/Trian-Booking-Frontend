@@ -1,10 +1,10 @@
 import React from 'react'
-import { Nav } from '../Component/Nav';
+import { NavMain } from '../Component/NavMain';
 export const Main = () => {
   return (
     <>
     <section className='mainBg'>
-    <Nav />
+    <NavMain />
     <div className="container mx-auto px-4 text-center">
         <div className='pt-20 md:pt-40 lg:pt-80'>
             <h4 className='welcome text-lg md:text-xl lg:text-2xl'>Welcome to</h4>
