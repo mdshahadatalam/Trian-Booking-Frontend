@@ -4,10 +4,11 @@ import './index.css'
 import App from './App.jsx'
 import firebaseConfig from './DB/Firebase';
 import { Provider } from 'react-redux';
-import Store from './Fueature/Store.jsx'
+import store from './Fueature/Store.jsx';
+
 
 createRoot(document.getElementById('root')).render(
-  <Provider store={Store}>
+  <Provider store={store}>
     <App />
   </Provider>,
 )

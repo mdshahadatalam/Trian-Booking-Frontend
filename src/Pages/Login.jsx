@@ -7,10 +7,13 @@ import { toast, ToastContainer } from 'react-toastify'
 import { SyncLoader } from 'react-spinners'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router'
+import { useDispatch } from 'react-redux'
+import { loggedInUser } from '../Fueature/Slice/LoginSlice'
 
 export const Login = () => {
   
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const auth = getAuth();
   const [loader,setLoader] = useState(false)
   const initialValues ={
@@ -34,6 +37,8 @@ export const Login = () => {
     console.log("Sign In");
     setLoader(false)
     if(user.user.emailVerified == true){
+      dispatch(loggedInUser(user))
+      localStorage.setItem("user",JSON.stringify(user))
       navigate('/')
     }else{
        toast.error('Your email is not verified', {

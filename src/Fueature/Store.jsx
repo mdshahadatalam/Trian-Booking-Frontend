@@ -5,3 +5,4 @@ const store = configureStore({
         login:LoginSlice
     }
 })
+export default store
