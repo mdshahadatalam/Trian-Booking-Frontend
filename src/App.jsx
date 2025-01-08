@@ -7,6 +7,7 @@ import { Rejistration } from './Pages/Rejistration';
 import { Login } from './Pages/Login';
 import LoggedInUser from './PrivateRoute/LoggedInUser';
 import LogOutInUser from './PrivateRoute/LogOutInUser';
+import { Home } from './Pages/Home';
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -17,6 +18,7 @@ function App() {
            <Route element={<LoggedInUser/>}>
            <Route element={<RootLayout/>}>
            <Route path="/" element={<Main />} />
+           <Route path="/home" element={<Home />} />
            </Route>
            </Route>
 

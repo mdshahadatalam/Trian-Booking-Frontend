@@ -1,9 +1,11 @@
 import React from 'react'
 import { NavMain } from '../Component/NavMain';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 export const Main = () => {
 
+
+    const navigate = useNavigate()
     const location = useLocation()
     {
         location.pathname='/'?`${toast.success('See you again 👋', {
@@ -20,6 +22,11 @@ export const Main = () => {
     }
     // console.log(location);
     
+    const handleHome =()=>{
+        navigate('/home')
+    }
+
+
   return (
     <>
     <section className='mainBg'>
@@ -30,7 +37,7 @@ export const Main = () => {
             <h3 className='tour text-2xl md:text-4xl lg:text-5xl font-bold'>
                 <span className='text-[#ffd979]'>Van Lang</span> Tour
             </h3>
-            <button className='view mt-4 px-6 py-2 bg-[#ffd979] text-black font-bold rounded-lg transition duration-300 ease-in-out transform hover:bg-[#d3ab44] hover:shadow-lg hover:scale-105'>
+            <button onClick={handleHome} className='view mt-4 px-6 py-2 bg-[#ffd979] text-black font-bold rounded-lg transition duration-300 ease-in-out transform hover:bg-[#d3ab44] hover:shadow-lg hover:scale-105'>
                 View Page
             </button>
         </div>

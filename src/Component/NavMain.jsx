@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {IoIosSearch} from "react-icons/io";
 import {CiMenuFries} from "react-icons/ci";
 import logo from '../assets/image/logo/brand 2.png'
-import { useLocation, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { getAuth, signOut } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { loggedInUser } from '../Fueature/Slice/LoginSlice';
@@ -48,7 +48,9 @@ export const NavMain = () => {
             <p className='ps-2 tracking-wide text-lg '><span className='text-[#FFDA79]'>Van Lang</span> Tour</p>
             </div>
             <ul className="items-center text-white gap-[20px] text-[1rem]  lg:flex hidden">
+                <Link className='text-white no-underline' to={'/home'}>
                 <li className=" text-lg tracking-wide px-2  before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">home</li>
+                </Link>
                 <li className=" text-lg tracking-wide px-2  before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">features</li>
                 <li className=" text-lg tracking-wide px-2  before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">blogs</li>
                 <li className=" text-lg tracking-wide px-2  before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">shop</li>
