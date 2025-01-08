@@ -2,8 +2,20 @@ import React, { useState } from 'react'
 import {IoIosSearch} from "react-icons/io";
 import {CiMenuFries} from "react-icons/ci";
 import logo from '../assets/image/logo/brand 2.png'
+import { useLocation, useNavigate } from 'react-router';
+
 export const Nav = () => {
+    const navigate = useNavigate()
+    const location = useLocation()
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
+
+  const handleLogin =()=>{
+    navigate('/login')
+  }
+
+  const handleSignUp =()=>{
+    navigate('/rejistration')
+  } 
   return (
     <>
 
@@ -25,12 +37,13 @@ export const Nav = () => {
             </ul>
 
             <div className="items-center gap-[10px] flex">
-                <button
-                    className="py-[7px] text-lg tracking-wide text-[1rem] px-[16px] rounded-full capitalize hover:text-[#3B9DF8] transition-all duration-300 sm:flex hidden">Sign
+                <button onClick={handleLogin}
+                    className={`${location.pathname == '/login'? "py-[7px] text-lg tracking-wide text-[1rem] px-[16px] rounded-full capitalize bg-[#3B9DF8] text-white hover:bg-blue-400 transition-all duration-300 sm:flex hidden":"py-[7px] text-lg tracking-wide text-[1rem] px-[16px] rounded-full capitalize hover:text-[#3B9DF8] transition-all duration-300 sm:flex hidden"}`}>Sign
                     in
                 </button>
-                <button
-                    className="py-[7px] text-lg tracking-wide text-[1rem] px-[16px] rounded-full capitalize bg-[#3B9DF8] text-white hover:bg-blue-400 transition-all duration-300 sm:flex hidden">Sign
+                <button 
+                    onClick={handleSignUp}
+                    className={`${location.pathname == '/rejistration'?"py-[7px] text-lg tracking-wide text-[1rem] px-[16px] rounded-full capitalize bg-[#3B9DF8] text-white hover:bg-blue-400 transition-all duration-300 sm:flex hidden":"py-[7px] text-lg tracking-wide text-[1rem] px-[16px] rounded-full capitalize hover:text-[#3B9DF8] transition-all duration-300 sm:flex hidden"}`}>Sign
                     up
                 </button>
 
