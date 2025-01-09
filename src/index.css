@@ -408,3 +408,35 @@ color: white;
         width: auto;
         }
   }
+
+  .navLi{
+font-weight: 700 !important;
+font-size: 40px !important;
+color: var(--color-5) !important;
+text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+  }
+  .navLiAll{
+font-weight: 700 !important;
+font-size: 24px !important;
+color: var(--color-5) !important;
+text-transform: capitalize !important;
+text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+  }
+
+
+  /* Remove hover effect on nav links */
+.nav-link.navLi:hover {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: inherit !important;
+  }
+  
+  /* Remove the horizontal line (if it's part of the default styles) */
+  .nav-tabs {
+    border-bottom: none !important;
+  }
+  
+  /* If you have an explicit <hr> element, remove it */
+  hr {
+    display: none !important;
+  }
