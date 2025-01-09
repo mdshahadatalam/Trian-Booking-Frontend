@@ -332,4 +332,40 @@ color: var(--color-2);
   }
 
 
-  
+  /* HomeSearch  */
+
+  .HomeSearch{
+    background-image:url(./assets//image/homeImg/section.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+  }
+
+  .select{
+    border-radius: 14px;
+    width: 174px;
+    height: 65px;
+font-weight: 700;
+font-size: 24px;
+color: rgba(255, 255, 255, 0.5);
+background: var(--color-5);
+outline: none;
+  }
+
+  .activity{
+font-weight: 700;
+font-size: 24px;
+color: white;
+  }
+
+  .select::placeholder{
+    color: white;
+  } 
+
+
+  @media (max-width: 767.98px) { 
+    .bookinHT{
+        height: auto;
+      }
+  }
