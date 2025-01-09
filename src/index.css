@@ -521,6 +521,8 @@ font-size: 40px;
 color: var(--color-2);
   }
 
+  /* booking section  */
+
   .bookingSec{
     background-image: url(./assets//image/bookingMain/bg.png);
     background-repeat: no-repeat;
@@ -528,3 +530,34 @@ color: var(--color-2);
     background-size: cover;
     height: 1200px;
   }
+
+  .time{
+font-weight: 700;
+font-size: 35px;
+color: var(--color-3);
+  }
+
+.timeHead{
+font-weight: 700;
+font-size: 25px;
+color: #696969;
+  }
+
+  .first{
+font-weight: 400;
+font-size: 17px;
+color: var(--color-3);
+  }
+
+  .details{
+font-weight: 500;
+font-size: 14px;
+color: #997200;
+  }
+
+  .bookingOper{
+    opacity: 75%;
+  }
+
+  
+  
