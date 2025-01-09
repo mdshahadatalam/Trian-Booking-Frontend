@@ -11,10 +11,14 @@ export const BookinSearch = () => {
                 <div className='mt-3'>
                     <h4 className='activity text-white'>Activity</h4>
                     <form>
-                        <select className='select shadow-md w-full p-2 rounded'>
-                            <option value="au">Australia</option>
-                            <option value="ca">Canada</option>
-                            <option value="usa">USA</option>
+                        <select  className='select shadow-md w-full p-2 rounded'>
+                            <option value="au">Chittagong</option>
+                            <option value="ca">Dhaka</option>
+                            <option value="usa">Shylet</option>
+                            <option value="usa">Borishal</option>
+                            <option value="usa">Rajshahi</option>
+                            <option value="usa">Cox bazar</option>
+ 
                         </select>
                     </form>
                 </div>
@@ -26,9 +30,12 @@ export const BookinSearch = () => {
                     <h4 className='activity text-white'>Destination</h4>
                     <form>
                         <select className='select shadow-md w-full p-2 rounded'>
-                            <option value="au">Australia</option>
-                            <option value="ca">Canada</option>
-                            <option value="usa">USA</option>
+                        <option value="au">Chittagong</option>
+                            <option value="ca">Dhaka</option>
+                            <option value="usa">Shylet</option>
+                            <option value="usa">Borishal</option>
+                            <option value="usa">Rajshahi</option>
+                            <option value="usa">Cox bazar</option>
                         </select>
                     </form>
                 </div>
@@ -47,7 +54,9 @@ export const BookinSearch = () => {
             {/* Search Button */}
             <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 px-2 mb-4">
                 <div className='pt-8'>
-                    <button className='select w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600'>Search</button>
+                <button className='selectBtn w-full p-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-600 hover:to-blue-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300'>
+                   Search
+                  </button>
                 </div>
             </div>
         </div>
