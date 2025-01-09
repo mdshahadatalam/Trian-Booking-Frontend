@@ -339,7 +339,7 @@ color: var(--color-2);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 800px;
+    /* height: 800px; */
   }
 
   .select{
@@ -439,4 +439,45 @@ text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
   /* If you have an explicit <hr> element, remove it */
   hr {
     display: none !important;
+  }
+
+
+  .MyImg{
+    box-shadow: 0 24px 116px 0 rgba(43, 56, 76, 0.09);
+}
+
+.MyImg {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MyImg:hover {
+    transform: scale(1.05); /* Scale the image on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+
+.MyImg {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .MyImg {
+      width: 50%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .MyImg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .MyImg {
+      width: 100%;
+      height: auto;
+    }
   }

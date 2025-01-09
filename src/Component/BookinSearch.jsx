@@ -12,13 +12,12 @@ export const BookinSearch = () => {
                     <h4 className='activity text-white'>Activity</h4>
                     <form>
                         <select  className='select shadow-md w-full p-2 rounded'>
-                            <option value="au">Chittagong</option>
-                            <option value="ca">Dhaka</option>
-                            <option value="usa">Shylet</option>
-                            <option value="usa">Borishal</option>
-                            <option value="usa">Rajshahi</option>
-                            <option value="usa">Cox bazar</option>
- 
+                            <option value="au">hà nội</option>
+                            <option value="ca">đà nẵng</option>
+                            <option value="usa">vịnh hạ long</option>
+                            <option value="usa">hà nội - đà nẵng</option>
+                            <option value="usa">sài gòn - hà nội</option>
+                    
                         </select>
                     </form>
                 </div>
@@ -30,12 +29,12 @@ export const BookinSearch = () => {
                     <h4 className='activity text-white'>Destination</h4>
                     <form>
                         <select className='select shadow-md w-full p-2 rounded'>
-                        <option value="au">Chittagong</option>
-                            <option value="ca">Dhaka</option>
-                            <option value="usa">Shylet</option>
-                            <option value="usa">Borishal</option>
-                            <option value="usa">Rajshahi</option>
-                            <option value="usa">Cox bazar</option>
+                        <option value="usa">sài gòn - hà nội</option>
+                         <option value="au">hà nội</option>
+                            <option value="ca">đà nẵng</option>
+                            <option value="usa">vịnh hạ long</option>
+                            <option value="usa">hà nội - đà nẵng</option>
+                            <option value="usa">sài gòn - hà nội</option>
                         </select>
                     </form>
                 </div>
