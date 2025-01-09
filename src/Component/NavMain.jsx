@@ -56,7 +56,9 @@ export const NavMain = () => {
                  <li className=" text-lg tracking-wide px-2  before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">About us</li>
                  </Link>
 
+                <Link className='text-white no-underline' to={'/booking'}>
                 <li className=" text-lg tracking-wide px-2  before:w-0 hover:before:w-full before:bg-[#3B9DF8] before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-[#3B9DF8] transition-all duration-300 before:left-0 cursor-pointer capitalize">booking</li>
+                </Link>
             </ul>
 
             <div className="items-center gap-[10px] flex">

@@ -9,6 +9,7 @@ import LoggedInUser from './PrivateRoute/LoggedInUser';
 import LogOutInUser from './PrivateRoute/LogOutInUser';
 import { Home } from './Pages/Home';
 import { AboutUs } from './Pages/AboutUs';
+import { Booking } from './Pages/Booking';
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -21,6 +22,7 @@ function App() {
            <Route path="/home" element={<Home />} />
            <Route path="/" element={<Main />} />
            <Route path="/about" element={<AboutUs />} />
+           <Route path="/booking" element={<Booking />} />  
            </Route>
            </Route>
 

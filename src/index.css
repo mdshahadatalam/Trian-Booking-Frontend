@@ -508,3 +508,23 @@ color: var(--color-2);
             margin-bottom: 10px;
         }
   }
+
+  .ourSto{
+font-weight: 700;
+font-size: 64px;
+color: var(--color-4);
+  }
+
+  .aboutDami{
+font-weight: 400;
+font-size: 40px;
+color: var(--color-2);
+  }
+
+  .bookingSec{
+    background-image: url(./assets//image/bookingMain/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1200px;
+  }
