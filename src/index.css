@@ -26,7 +26,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 1000px;
+	height: 900px !important;
 }
 .welcome{
 font-weight: 700;
@@ -77,6 +77,15 @@ color: var(--color-2);
 
     .tour {
         font-size: 3rem; /* 48px */
+    }
+    .mainBg{
+        height: auto !important;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .mainBg{
+        height: auto !important;
     }
 }
 
@@ -480,4 +489,22 @@ text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
       width: 100%;
       height: auto;
     }
+  }
+
+  /* about section  */
+  .aboutHead{
+font-weight: 700;
+font-size: 48px;
+color: var(--color-2);
+  }
+
+  @media (max-width: 575.98px) { 
+    .aboutHead{
+        font-weight: 700;
+        font-size: 38px;
+        color: var(--color-2);
+        }
+        .view {
+            margin-bottom: 10px;
+        }
   }
