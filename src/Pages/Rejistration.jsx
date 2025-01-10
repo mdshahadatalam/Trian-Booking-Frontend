@@ -6,7 +6,7 @@ import { getAuth, createUserWithEmailAndPassword , sendEmailVerification } from 
 import { toast, ToastContainer } from 'react-toastify';
 import { useState } from 'react';
 import { SyncLoader } from 'react-spinners';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 export const Rejistration = () => {
   const navigate = useNavigate()
@@ -164,7 +164,7 @@ export const Rejistration = () => {
                     </div>
                 </form>
 
-            
+                <p className='text-slate-700 font-serif tracking-wide pt-3'> Have a account? <Link className='text-slate-700 no-underline hover:text-blue-500 hover:underline' to={'/login'}>Sign In</Link> </p>
                 
             </div>
 

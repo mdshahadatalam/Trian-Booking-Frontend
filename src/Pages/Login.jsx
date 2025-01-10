@@ -6,7 +6,7 @@ import { signIn } from '../Validation/Validation'
 import { toast, ToastContainer } from 'react-toastify'
 import { SyncLoader } from 'react-spinners'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { useDispatch } from 'react-redux'
 import { loggedInUser } from '../Fueature/Slice/LoginSlice'
 
@@ -119,7 +119,7 @@ export const Login = () => {
                      </div>
                 </form>
 
-                
+                 <p className='text-slate-700 font-serif tracking-wide ps-2'>Don't have a account? <Link className='text-slate-700 no-underline hover:text-blue-500 hover:underline' to={'/rejistration'}>Sign up</Link> </p>
      
             </div>
         </div>
