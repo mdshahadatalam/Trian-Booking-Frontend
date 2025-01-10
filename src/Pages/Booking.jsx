@@ -3,8 +3,15 @@ import { NavMain } from '../Component/NavMain'
 import { BookinSearch } from '../Component/BookinSearch'
 import { FaTrainSubway } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from 'react-router';
 
 export const Booking = () => {
+ 
+     const navigate = useNavigate()
+     const handleBookingFrom =()=>{
+          navigate('/bookingFrom')
+     }
+
   return (
      <>
         <section className='bookingSec'>
@@ -40,7 +47,7 @@ export const Booking = () => {
                                </div>
 
                                <div className="col-lg-1 d-flex justify-end h-full ">
-                                  <span className='text-white cursor-pointer bg-black text-xl w-[40px] h-[40px] rounded-full justify-center align-items-center d-flex '><IoIosArrowForward /></span>
+                                  <span onClick={handleBookingFrom} className='text-white cursor-pointer bg-black text-xl w-[40px] h-[40px] rounded-full justify-center align-items-center d-flex '><IoIosArrowForward /></span>
                                </div>
                          </div>
 
@@ -80,7 +87,7 @@ export const Booking = () => {
                                </div>
 
                                <div className="col-lg-1 d-flex justify-end h-full ">
-                                  <span className='text-white cursor-pointer bg-black text-xl w-[40px] h-[40px] rounded-full justify-center align-items-center d-flex '><IoIosArrowForward /></span>
+                                  <span onClick={handleBookingFrom} className='text-white cursor-pointer bg-black text-xl w-[40px] h-[40px] rounded-full justify-center align-items-center d-flex '><IoIosArrowForward /></span>
                                </div>
                          </div>
 
@@ -121,7 +128,7 @@ export const Booking = () => {
                                </div>
 
                                <div className="col-lg-1 d-flex justify-end h-full ">
-                                  <span className='text-white cursor-pointer bg-black text-xl w-[40px] h-[40px] rounded-full justify-center align-items-center d-flex '><IoIosArrowForward /></span>
+                                  <span onClick={handleBookingFrom} className='text-white cursor-pointer bg-black text-xl w-[40px] h-[40px] rounded-full justify-center align-items-center d-flex '><IoIosArrowForward /></span>
                                </div>
                          </div>
 
@@ -137,7 +144,7 @@ export const Booking = () => {
                     <div className="container py-5  smallBooking d-lg-none">
                          <div className="row">
                               <div className="col-md-4">
-                                  <div className='bg-white rounded-md shadow-md p-2 bookingOper mt-4    transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105 '>
+                                  <div onClick={handleBookingFrom} className='bg-white rounded-md shadow-md p-2 bookingOper mt-4    transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105 '>
                                        <div className='d-flex justify-center py-3'><span className='text-3xl '><FaTrainSubway /></span></div>
                                         <div className='text-center'><span className=' text-slate-600 font-serif'>12:00 - 12:00</span> </div>
                                            <div className='text-center'><span className=' text-slate-600 font-serif py-2 font-bold tracking-wide'>Sai Gon - Ha Noi</span> </div>  
@@ -149,7 +156,7 @@ export const Booking = () => {
                                   </div>
                               </div>
                               <div className="col-md-4">
-                              <div className='bg-white rounded-md shadow-md p-2 bookingOper mt-4    transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105 '>
+                              <div onClick={handleBookingFrom} className='bg-white rounded-md shadow-md p-2 bookingOper mt-4    transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105 '>
                                        <div className='d-flex justify-center py-3'><span className='text-3xl '><FaTrainSubway /></span></div>
                                         <div className='text-center'><span className=' text-slate-600 font-serif'>12:00 - 12:00</span> </div>
                                            <div className='text-center'><span className=' text-slate-600 font-serif py-2 font-bold tracking-wide'>Sai Gon - Ha Noi</span> </div>  
@@ -161,7 +168,7 @@ export const Booking = () => {
                                   </div>
                               </div>
                               <div className="col-md-4">
-                              <div className='bg-white rounded-md shadow-md p-2 bookingOper  mt-4   transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105 '>
+                              <div onClick={handleBookingFrom} className='bg-white rounded-md shadow-md p-2 bookingOper  mt-4   transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105 '>
                                        <div className='d-flex justify-center py-3'><span className='text-3xl '><FaTrainSubway /></span></div>
                                         <div className='text-center'><span className=' text-slate-600 font-serif'>12:00 - 12:00</span> </div>
                                            <div className='text-center'><span className=' text-slate-600 font-serif py-2 font-bold tracking-wide'>Sai Gon - Ha Noi</span> </div>  

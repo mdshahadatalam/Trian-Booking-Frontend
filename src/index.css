@@ -568,4 +568,46 @@ color: #997200;
   }
 
   
+
+/* boking from  */
+
+.BookingForm{
+  background-image: url(./assets//image/bookingMain/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bkFrom::placeholder{
+  font-weight: 500;
+  font-size: 16px;
+  color:black;
+}
+
+.bkFrom{
+width: 281px;
+height: 37px;
+outline: none;
+border-bottom: 1px solid black;
+}
+
+.bkFrom::placeholder{
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .BookingForm{
+    height: auto;
+  }
+
+  .FromSecBk{
+    margin-bottom: 30px !important;
+  }
+
+  .bkFrom{
+    width: 90%;
+  }
+}
+
   
