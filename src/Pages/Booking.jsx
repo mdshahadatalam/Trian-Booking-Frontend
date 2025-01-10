@@ -144,6 +144,8 @@ export const Booking = () => {
                                         
 
                                         <p className='text-slate-700 font-mono text-sm py-2 text-center'>first class - 24hrs00mins travel</p>
+
+                                          <div className='text-center'><span className=' text-slate-600 font-serif font-bold '>price: <span className='text-[#DCA400]'>1,000,000</span> VND</span> </div>
                                   </div>
                               </div>
                               <div className="col-md-4">
@@ -154,6 +156,8 @@ export const Booking = () => {
                                         
 
                                         <p className='text-slate-700 font-mono text-sm py-2 text-center'>first class - 24hrs00mins travel</p>
+
+                                          <div className='text-center'><span className=' text-slate-600 font-serif font-bold '>price: <span className='text-[#DCA400]'>1,000,000</span> VND</span> </div>
                                   </div>
                               </div>
                               <div className="col-md-4">
@@ -164,6 +168,8 @@ export const Booking = () => {
                                         
 
                                         <p className='text-slate-700 font-mono text-sm py-2 text-center'>first class - 24hrs00mins travel</p>
+
+                                          <div className='text-center'><span className=' text-slate-600 font-serif font-bold '>price: <span className='text-[#DCA400]'>1,000,000</span> VND</span> </div>
                                   </div>
                               </div>
                          </div>

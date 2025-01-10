@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router'
+import { PropagateLoader } from 'react-spinners'
 
 export const BookinSearch = () => {
+      
+    const navigate = useNavigate()
+    const [loader,setLoader] = useState()
+     const handleSearch =()=>{
+        setLoader(true)
+        setTimeout(()=>{
+            navigate('/booking')
+        },2500)
+     }
   return (
     <>
     <section className='bg-[#000000] bookinHT  nav h-[300px]'>
@@ -52,8 +63,13 @@ export const BookinSearch = () => {
             {/* Search Button */}
             <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 px-2 mb-4">
                 <div className='pt-8'>
-                <button className='selectBtn w-full p-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-600 hover:to-blue-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300'>
-                   Search
+                <button
+                  onClick={handleSearch}
+                 className='selectBtn w-full p-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-600 hover:to-blue-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300'>
+                    {
+                        loader ? <PropagateLoader size={5} color='white' /> : "Search"
+                    }
+                   
                   </button>
                 </div>
             </div>
