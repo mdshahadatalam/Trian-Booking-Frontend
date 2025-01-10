@@ -30,9 +30,8 @@ export const BookinSearch = () => {
                     <form>
                         <select className='select shadow-md w-full p-2 rounded'>
                         <option value="usa">sài gòn - hà nội</option>
-                         <option value="au">hà nội</option>
+                            <option value="au">hà nội</option>
                             <option value="ca">đà nẵng</option>
-                            <option value="usa">vịnh hạ long</option>
                             <option value="usa">hà nội - đà nẵng</option>
                             <option value="usa">sài gòn - hà nội</option>
                         </select>
