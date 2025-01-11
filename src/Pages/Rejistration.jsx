@@ -81,7 +81,7 @@ export const Rejistration = () => {
     <section className='RejiBg'>
     <Nav />
     <div className="container position-relative d-flex justify-center align-items-center">
-        <div className='bg-[#FFFFFF] nav modalView text-white position-absolute top-52 w-[90%] md:w-[50%] rounded-2xl shadow-md px-2 py-5'>
+        <div className='bg-[#FFFFFF] nav modalView text-white position-absolute top-52 w-[90%] md:w-[60%] rounded-2xl shadow-md px-2 py-5'>
             <div className='text-center'>
                 <h4 className='ready text-xl md:text-2xl lg:text-3xl'>Ready to join Van Lang Tour? Let’s get started</h4>
                 <p className='weNeed text-sm md:text-base lg:text-lg my-2'>We need a few details about you to create your account profile</p>
@@ -89,7 +89,7 @@ export const Rejistration = () => {
                 <form onSubmit={formik.handleSubmit} action="">
                     
                         <input
-                         className='logInpo my-3' type="text"
+                         className='bkFrom mx-3 my-4 font-serif tracking-wider text-black'  type="text"
                           placeholder='First name'
                           id='firstName'
                           name='firstName'
@@ -100,7 +100,7 @@ export const Rejistration = () => {
                               formik.errors.firstName && formik.touched.firstName && <div className="text-red-500"> {formik.errors.firstName} </div>
                             }
                         <input 
-                        className='logInpo my-3' type="text"
+                       className='bkFrom mx-3 my-4 font-serif tracking-wider text-black'  type="text"
                          placeholder='Last name'
                          id='lastName'
                          name='lastName'
@@ -113,7 +113,7 @@ export const Rejistration = () => {
                     
                     
                         <input
-                         className='logInpo my-3 ' type="tel"
+                         className='bkFrom mx-3 my-4 font-serif tracking-wider text-black'  type="tel"
                           placeholder='Phone number'
                           id='phone'
                           name='phone'
@@ -126,7 +126,7 @@ export const Rejistration = () => {
                             </div>
                            }
                         <input
-                         className='logInpo my-3' type="email"
+                         className='bkFrom mx-3 my-4 font-serif tracking-wider text-black'  type="email"
                           placeholder='Email'
                           id='email'
                           name='email'
@@ -140,7 +140,7 @@ export const Rejistration = () => {
                     
                     
                         <input
-                         className='logInpo my-3' type="password"
+                         className='bkFrom mx-3 my-4 font-serif tracking-wider text-black'  type="password"
                          id='password'
                          name='password'
                           placeholder='Password'

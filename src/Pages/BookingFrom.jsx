@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { NavMain } from '../Component/NavMain'
-
+import axios from 'axios'
+import { toast, ToastContainer } from 'react-toastify'
+import { PulseLoader } from 'react-spinners'
 
 export const BookingFrom = () => {
 
@@ -8,6 +10,8 @@ const [fullName,setFullName] = useState("")
 const [email,setEmail] = useState("")
 const [phone,setPhone] = useState("")
 const [address,setAddress] = useState("")
+
+const [loader,setLoader] = useState(false)
 
 const handleFullName = (e) => {
     setFullName(e.target.value)
@@ -26,7 +30,43 @@ const handleAddress =(e)=>{
 }
 
 const handleSubmit =()=>{
-console.log(fullName,email,phone,address)
+// console.log(fullName,email,phone,address)
+setLoader(true)
+
+axios.post('http://localhost:3000/emailSend',{fullName,email,phone,address}).then(res=>{
+    console.log(res.data)
+    setLoader(false)
+    setFullName('')
+    setEmail('')
+    setPhone('')
+    setAddress('')
+    toast.success('Thank you for apply', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: Bounce,
+        });
+}).catch(err=>{
+    console.log(err)
+    setLoader(false)
+    toast.error('Please try again', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: Bounce,
+        });
+})
+
 }
   return (
    <>
@@ -46,6 +86,8 @@ console.log(fullName,email,phone,address)
                             id='full name'
                             name='full name'
                             onChange={handleFullName}
+                            value={fullName}
+                            required
                              />
 
                             <input 
@@ -55,6 +97,8 @@ console.log(fullName,email,phone,address)
                              id='email'
                              name='email'
                              onChange={handleEmail}
+                             value={email}
+                             required
                              /> <br />
 
                              <input
@@ -64,6 +108,8 @@ console.log(fullName,email,phone,address)
                                id='phone'
                                name='phone'
                                onChange={handlePhone}
+                               value={phone}
+                               required
                                />
 
                              <input 
@@ -73,10 +119,17 @@ console.log(fullName,email,phone,address)
                               id='address'
                               name='address'
                               onChange={handleAddress}
+                              value={address}
+                              required
                               />
 
                             <div className='mt-5'>
-                                <button onClick={handleSubmit} className='w-[120px] h-[50px] bg-[#deb449] font-bold font-serif text-white tracking-wider rounded-md shadow-md '>Apply</button>
+                                <button onClick={handleSubmit} className='w-[120px] h-[50px] bg-[#deb449] font-bold font-serif text-white tracking-wider rounded-md shadow-md '>
+                                    {
+                                        loader?<PulseLoader size={5} color='white' />: "Apply"
+                                    }
+                                    
+                                    </button>
                             </div>
                     </div>
                 </div>
@@ -84,7 +137,7 @@ console.log(fullName,email,phone,address)
             </div>
         </div>
      </section>
-    
+     <ToastContainer />
    </>
   )
 }

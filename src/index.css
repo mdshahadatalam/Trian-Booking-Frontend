@@ -137,7 +137,7 @@ color: var(--color-2);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 1000px;
+	height: 1200px;
 }
 
 .ready{
@@ -190,6 +190,7 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         line-height: 30px !important;
         color: var(--color-3);
         }
+
 }
 @media (max-width: 767.98px) { 
     .ready{
