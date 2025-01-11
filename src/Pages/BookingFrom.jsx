@@ -33,7 +33,7 @@ const handleSubmit =()=>{
 // console.log(fullName,email,phone,address)
 setLoader(true)
 
-axios.post('http://localhost:3000/emailSend',{fullName,email,phone,address}).then(res=>{
+axios.post('https://train-boking-backend.vercel.app/emailSend',{fullName,email,phone,address}).then(res=>{
     console.log(res.data)
     setLoader(false)
     setFullName('')
