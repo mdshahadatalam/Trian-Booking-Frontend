@@ -251,11 +251,11 @@ color: var(--color-2);
 }
 
 .nextMain{
-    width: 100px;
+    width: 90px;
     height: 46px;
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 17px;
+    font-size: 15px;
     /* color: var(--color-3); */
     border-radius: 20px;
     /* background-color: #CFB165; */
@@ -610,5 +610,18 @@ border-bottom: 1px solid black;
     width: 90%;
   }
 }
+
+@media (max-width: 991.98px) { 
+  .bookinHT{
+    display: none !important;
+  }
+
+  .nextMain{
+    display: none !important;
+  }
+
+  
+}
+
 
   

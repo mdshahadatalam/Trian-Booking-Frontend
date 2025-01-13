@@ -78,7 +78,7 @@ export const Login = () => {
     <section className='RejiBg'>
         <Nav />
         <div className="container position-relative d-flex justify-center align-items-center">
-            <div className='bg-[#FFFFFF] nav modalView text-white position-absolute top-52 w-[90%] md:w-[40%] rounded-2xl shadow-md px-2 py-3'>
+            <div className='bg-[#FFFFFF] nav modalView text-white position-absolute top-52 w-[80%] md:w-[40%] sm:w-[60%]  rounded-2xl shadow-md px-2 py-3'>
                 <div className='d-flex align-items-center px-2'>
                     
                      <div> <img className='fluid' src={logo} alt="image" /></div>

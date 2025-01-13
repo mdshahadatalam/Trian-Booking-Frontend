@@ -8,22 +8,7 @@ export const Main = () => {
   
     const [loader,setLoader] = useState(false)
     const navigate = useNavigate()
-    const location = useLocation()
-    {
-        location.pathname='/'?`${toast.success('See you again 👋', {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            // transition: Bounce,
-            })}` : ""
-    }
-    // console.log(location);
-    
+
     const handleHome =()=>{
         setLoader(true)
         setTimeout(()=>{

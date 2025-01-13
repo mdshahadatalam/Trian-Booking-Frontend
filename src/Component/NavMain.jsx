@@ -75,7 +75,7 @@ export const NavMain = () => {
             </div>
 
             <aside
-                className={` ${mobileSidebarOpen ? "translate-y-0 opacity-100 z-20" : "translate-y-[200px] opacity-0 z-[-1]"} lg:hidden bg-white boxShadow p-4 text-center absolute top-[65px] right-0 w-full rounded-md transition-all duration-300`}>
+                className={` ${mobileSidebarOpen ? "translate-y-0 opacity-100 z-20" : "translate-y-[200px] opacity-0 z-[-1]"} lg:hidden bg-black boxShadow p-4 text-center absolute top-[65px] right-0 w-full rounded-md transition-all duration-300`}>
                 <div className="relative mb-5">
                     <input
                         className="py-1.5 pr-4 w-full pl-10 rounded-full border border-gray-200 outline-none focus:border-[#3B9DF8]"
@@ -83,11 +83,29 @@ export const NavMain = () => {
                     <IoIosSearch className="absolute top-[8px] left-3 text-gray-500 text-[1.3rem]"/>
                 </div>
                 <ul className="items-center gap-[20px] text-[1rem] text-gray-600 flex flex-col">
+                    <Link onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)} className='text-white no-underline' to={'/'}>
                     <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">home</li>
-                    <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-poin ter capitalize">Features
+                    </Link>
+                    
+                    <Link onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)} className='text-white no-underline' to={'/about'}>
+                    <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-poin ter capitalize">About us
                     </li>
-                    <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">Blogs</li>
-                    <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">Shop</li>
+                    </Link>
+                    
+                    <Link onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)} className='text-white no-underline' to={'/booking'}>
+                    <li className="hover:border-b-[#3B9DF8] border-b-[2px] border-transparent transition-all duration-500 cursor-pointer capitalize">booking</li>
+                    </Link>
+                      
+
+                    <button onClick={handleLoggedOutUser}
+                    className=" w-[75px] h-[40px] tracking-wide rounded-md  bg-[#3B9DF8] text-white tracking-wide mt-2 transition duration-300 shadow-md ease-in-out transform hover:bg-[#337bbe] hover:shadow-lg hover:scale-105">
+                        {
+                            loader ? <SyncLoader size={5} color='white'/> : "LogOut"
+                        } 
+                </button>
+                       
+                   
+                    
                 </ul>
             </aside>
         </nav>
