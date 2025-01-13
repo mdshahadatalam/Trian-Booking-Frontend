@@ -98,7 +98,7 @@ export const NavMain = () => {
                       
 
                     <button onClick={handleLoggedOutUser}
-                    className=" w-[75px] h-[40px] tracking-wide rounded-md  bg-[#3B9DF8] text-white tracking-wide mt-2 transition duration-300 shadow-md ease-in-out transform hover:bg-[#337bbe] hover:shadow-lg hover:scale-105">
+                    className=" w-[75px] h-[40px]  rounded-md  bg-[#3B9DF8] text-white tracking-wide mt-2 transition duration-300 shadow-md ease-in-out transform hover:bg-[#337bbe] hover:shadow-lg hover:scale-105">
                         {
                             loader ? <SyncLoader size={5} color='white'/> : "LogOut"
                         } 
