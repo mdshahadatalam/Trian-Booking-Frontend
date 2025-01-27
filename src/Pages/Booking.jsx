@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavMain } from '../Component/NavMain'
 import { BookinSearch } from '../Component/BookinSearch'
 import { FaTrainSubway } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from 'react-router';
-
+import Aos from 'aos'
 export const Booking = () => {
  
      const navigate = useNavigate()
      const handleBookingFrom =()=>{
           navigate('/bookingFrom')
      }
+
+     useEffect( ()=>{
+                   Aos.init();
+                 })
 
   return (
      <>
@@ -21,7 +25,7 @@ export const Booking = () => {
                 <div className="row py-5">
                     
                     <div className="col-lg-2"></div>
-                    <div className="col-lg-8 bg-[#ffff] rounded-md shadow-md bookingOper   transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105">
+                    <div data-aos="zoom-in" data-aos-duration="2500" className="col-lg-8 bg-[#ffff] rounded-md shadow-md bookingOper   transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105">
 
                          <div className="row justify-center  align-items-center py-5 px-1">
                                <div className="col-lg-2">
@@ -61,7 +65,7 @@ export const Booking = () => {
                 <div className="row py-5">
                     
                     <div className="col-lg-2"></div>
-                    <div className="col-lg-8 bg-[#ffff] rounded-md shadow-md bookingOper   transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105">
+                    <div data-aos="zoom-in" data-aos-duration="1500" className="col-lg-8 bg-[#ffff] rounded-md shadow-md bookingOper   transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105">
 
                          <div className="row justify-center  align-items-center py-5 px-1">
                                <div className="col-lg-2">
@@ -102,7 +106,7 @@ export const Booking = () => {
                 <div className="row py-5">
                     
                     <div className="col-lg-2"></div>
-                    <div className="col-lg-8 bg-[#ffff] rounded-md shadow-md bookingOper   transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105">
+                    <div data-aos="zoom-in" data-aos-duration="1000" className="col-lg-8 bg-[#ffff] rounded-md shadow-md bookingOper   transition duration-300 ease-in-out transform  hover:shadow-lg hover:scale-105">
 
                          <div className="row justify-center  align-items-center py-5 px-1">
                                <div className="col-lg-2">
