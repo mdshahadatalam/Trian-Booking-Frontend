@@ -117,6 +117,8 @@ export const Login = () => {
                           }
                           </button>
                      </div>
+
+                     <Link to={'/forget'} className='no-underline hover:underline'><p className='m-0 text-black font-serif tracking-wider py-2'>Forget password?</p></Link>
                 </form>
 
                  <p className='text-slate-700 font-serif tracking-wide ps-2'>Don't have a account? <Link className='text-slate-700 no-underline hover:text-blue-500 hover:underline' to={'/rejistration'}>Sign up</Link> </p>

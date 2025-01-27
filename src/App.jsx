@@ -11,6 +11,7 @@ import { Home } from './Pages/Home';
 import { AboutUs } from './Pages/AboutUs';
 import { Booking } from './Pages/Booking';
 import { BookingFrom } from './Pages/BookingFrom';
+import { Forget } from './Component/Forget';
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -31,6 +32,7 @@ function App() {
            <Route element={<LogOutInUser/>}>
            <Route path="/rejistration" element={<Rejistration />} />
            <Route path="/login" element={<Login />} />
+           <Route path="/forget" element={<Forget />} />
            </Route>
 
 
