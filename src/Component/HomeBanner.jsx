@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { TbWorld } from "react-icons/tb";
-
+import Aos from 'aos'
 export const HomeBanner = () => {
+    useEffect( ()=>{
+              Aos.init();
+            })
   return (
     <>
     <section className='bg-[#EEE1BE] py-5'>
         <div className="container">
             <div className="row justify-center align-items-center">
                 <div className="col-lg-5">
-                <div className='box cursor-pointer mt-4 bg-[#CFB165] flex flex-col md:flex-row items-center rounded-md shadow-md p-4 hover:bg-[#B89A5A] transition-colors duration-300'>
+                <div data-aos="zoom-in" data-aos-duration="2500" className='box cursor-pointer mt-4 bg-[#CFB165] flex flex-col md:flex-row items-center rounded-md shadow-md p-4 hover:bg-[#B89A5A] transition-colors duration-300'>
                     <div className='mb-4 md:mb-0 md:mr-4'>
                         <span className='text-6xl md:text-9xl text-white'>
                             <HiOutlineDesktopComputer />
@@ -23,7 +26,7 @@ export const HomeBanner = () => {
                 </div>
                 </div>
                 <div className="col-lg-5">
-                <div className='box cursor-pointer mt-4 bg-[#CFB165] flex flex-col md:flex-row items-center rounded-md shadow-md p-4 hover:bg-[#B89A5A] transition-colors duration-300'>
+                <div data-aos="zoom-in" data-aos-duration="2500" className='box cursor-pointer mt-4 bg-[#CFB165] flex flex-col md:flex-row items-center rounded-md shadow-md p-4 hover:bg-[#B89A5A] transition-colors duration-300'>
                     <div className='mb-4 md:mb-0 md:mr-4'>
                         <span className='text-6xl md:text-9xl text-white'>
                            <TbWorld />

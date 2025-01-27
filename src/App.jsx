@@ -12,7 +12,7 @@ import { AboutUs } from './Pages/AboutUs';
 import { Booking } from './Pages/Booking';
 import { BookingFrom } from './Pages/BookingFrom';
 import { Forget } from './Component/Forget';
-
+import 'aos/dist/aos.css'
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
     
