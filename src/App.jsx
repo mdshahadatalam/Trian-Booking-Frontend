@@ -20,20 +20,24 @@ function App() {
            
         
            <Route element={<LoggedInUser/>}>
+           <Route path="/booking" element={<Booking />} /> 
+           <Route path="/bookingFrom" element={<BookingFrom />} />   
+           </Route>
+
            <Route element={<RootLayout/>}>
            <Route path="/home" element={<Home />} />
            <Route path="/" element={<Main />} />
            <Route path="/about" element={<AboutUs />} />
-           <Route path="/booking" element={<Booking />} /> 
-           <Route path="/bookingFrom" element={<BookingFrom />} />   
            </Route>
-           </Route>
+           
 
            <Route element={<LogOutInUser/>}>
+           </Route>
+
            <Route path="/rejistration" element={<Rejistration />} />
            <Route path="/login" element={<Login />} />
            <Route path="/forget" element={<Forget />} />
-           </Route>
+          
 
 
     </Route>

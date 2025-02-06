@@ -39,7 +39,7 @@ export const Login = () => {
     if(user.user.emailVerified == true){
       dispatch(loggedInUser(user))
       localStorage.setItem("user",JSON.stringify(user))
-      navigate('/')
+      navigate('/booking')
     }else{
        toast.error('Your email is not verified', {
               position: "top-right",
